@@ -6,8 +6,8 @@ module Assignment
 // Problem 1
 let rec tribn n =
     // write your code here
-    if n = 0 || n = 1 || n = 2 then 0
-    elif n = 3 then 1
+    if n = 1 || n = 2  then 0
+    elif n = 0 then 1
     else tribn(n - 1) + tribn(n - 2) + tribn(n - 3)
 
 // Problem 2
@@ -16,10 +16,11 @@ let tribn2 n =
     0
 
 // Problem 3
-let rec last lst =
+let rec last (lst:int list) = 
     // write your code here
-    0
-
+    if lst.Tail.IsEmpty then List.head lst
+    else last (List.tail lst)
+    
 // Problem 4
 let fourth (lst:int list) =
     // write your code here
